@@ -3,4 +3,11 @@ var index = 0;
 // 下一張按鈕
 var nextBtn = document.querySelector("#slider-next");
 
-console.log(nextBtn);
+// 下一張按鈕的功能
+function next() {
+    index++;
+    console.log("編號：" + index);
+}
+
+//下一張按鈕.點擊 = 下一張按鈕的功能
+nextBtn.onclick = next;
