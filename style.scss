@@ -14,6 +14,11 @@
         animation-name: slider-item;
         // 動畫持續時間
         animation-duration: 1s;
+        display: none;
+    }
+
+    .slider-active {
+        display: block;
     }
 
     @for $index from 1 through 3 {

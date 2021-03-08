@@ -16,6 +16,11 @@
           animation-name: slider-item;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+  display: none;
+}
+
+#slider-box .slider-active {
+  display: block;
 }
 
 #slider-box .slider-item:nth-of-type(1) {
