@@ -5,6 +5,11 @@
   font-family: 微軟正黑體;
 }
 
+#slider-box {
+  height: 100vh;
+  overflow: hidden;
+}
+
 #slider-box .slider-item {
   height: 100vh;
   -webkit-animation-name: slider-item;
