@@ -1,0 +1,7 @@
+#slider-box {
+    @for $index from 1 through 3 {
+        .slider-item:nth-of-type(#{$index}) {
+            background-image: url(./img/item#{$index}.jpg);
+        }
+    }
+}
