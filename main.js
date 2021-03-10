@@ -25,8 +25,12 @@ nextBtn.onclick = next;
 
 // 顯示項目
 function showItem() {
-    for (let index = 0; index < items.length; index++) {
-        const element = items[index];
-        console.log(element);
+    // 迴圈執行每一張項目
+    for (let i = 0; i < items.length; i++) {
+        // 刪除每一個項目的 啟動樣式
+        items[i].classList.remove("slider-active");
     }
+
+    // 指定目前要顯示的項目 添加 啟動樣式
+    items[index].classList.add("slider-active");
 }
