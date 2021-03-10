@@ -14,6 +14,7 @@ function next() {
     // 如果編號是 項目的數量 就將編號改為 零
     if (index == items.length) index = 0;
     showItem();
+    showDot();
 }
 
 function prev() {
@@ -21,6 +22,7 @@ function prev() {
 
     if (index == -1) index = items.length - 1;
     showItem();
+    showDot();
 }
 
 //下一張按鈕.點擊 = 下一張按鈕的功能
@@ -37,4 +39,14 @@ function showItem() {
 
     // 指定目前要顯示的項目 添加 啟動樣式
     items[index].classList.add("slider-active");
+}
+
+var dots = document.getElementsByClassName("slider-dot");
+
+function showDot() {
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("slider-dot-active");
+    }
+
+    dots[index].classList.add("slider-dot-active");
 }
