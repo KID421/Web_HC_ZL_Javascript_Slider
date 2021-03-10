@@ -1,14 +1,14 @@
 // 當前輪播圖的編號，從零開始
 var index = 0;
-// 下一張按鈕
+
+// 下一張與上一張按鈕
 var nextBtn = document.querySelector("#slider-next");
 var prevBtn = document.querySelector("#slider-prev");
+
 // 取得所有的輪播項目
 var items = document.getElementsByClassName("slider-item");
-// 輸出輪播項目的數量
-// console.log("輪播項目的數量：" + items.length);
 
-// 下一張按鈕的功能
+// 下一張與上一張按鈕的功能
 function next() {
     index++;
     // 如果編號是 項目的數量 就將編號改為 零
@@ -25,7 +25,7 @@ function prev() {
     showDot();
 }
 
-//下一張按鈕.點擊 = 下一張按鈕的功能
+//下一張與上一張按鈕.點擊 = 下一張按鈕的功能與上一張按鈕的功能
 nextBtn.onclick = next;
 prevBtn.onclick = prev;
 
@@ -41,8 +41,10 @@ function showItem() {
     items[index].classList.add("slider-active");
 }
 
+// 取得所有點點
 var dots = document.getElementsByClassName("slider-dot");
 
+// 顯示點點
 function showDot() {
     for (let i = 0; i < dots.length; i++) {
         dots[i].classList.remove("slider-dot-active");
