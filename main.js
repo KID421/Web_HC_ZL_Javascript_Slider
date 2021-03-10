@@ -67,3 +67,13 @@ for (let i = 0; i < dots.length; i++) {
         clickDot(i);
     };
 }
+
+// 自動播放
+var interval = 3000;
+
+function autoPlay() {
+    next();
+}
+
+// 設定間隔(函式，間隔時間)
+setInterval(autoPlay, interval);
