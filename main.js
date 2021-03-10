@@ -52,3 +52,18 @@ function showDot() {
 
     dots[index].classList.add("slider-dot-active");
 }
+
+// 點擊點點(接收點點的編號)
+function clickDot(i) {
+    // 更新編號
+    index = i;     
+    showItem();
+    showDot();
+}
+
+// 利用迴圈指定每一個點點 按下去 傳編號給 clickDot
+for (let i = 0; i < dots.length; i++) {
+    dots[i].onclick = function () {
+        clickDot(i);
+    };
+}
