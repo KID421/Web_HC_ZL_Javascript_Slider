@@ -15,6 +15,7 @@ function next() {
     if (index == items.length) index = 0;
     showItem();
     showDot();
+    resetTimer();
 }
 
 function prev() {
@@ -23,6 +24,7 @@ function prev() {
     if (index == -1) index = items.length - 1;
     showItem();
     showDot();
+    resetTimer();
 }
 
 //下一張與上一張按鈕.點擊 = 下一張按鈕的功能與上一張按鈕的功能
@@ -59,6 +61,7 @@ function clickDot(i) {
     index = i;     
     showItem();
     showDot();
+    resetTimer();
 }
 
 // 利用迴圈指定每一個點點 按下去 傳編號給 clickDot
@@ -75,5 +78,13 @@ function autoPlay() {
     next();
 }
 
-// 設定間隔(函式，間隔時間)
-setInterval(autoPlay, interval);
+// 計時器 = 設定間隔(函式，間隔時間)
+var timer = setInterval(autoPlay, interval);
+
+// 重新設定計時器
+function resetTimer(){
+    // 清除計時器
+    clearInterval();
+    // 重新設定間隔
+    timer = setInterval(autoPlay, interval);
+}
