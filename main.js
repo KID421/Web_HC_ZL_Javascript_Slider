@@ -72,7 +72,8 @@ for (let i = 0; i < dots.length; i++) {
 }
 
 // 自動播放
-var interval = 3000;
+var box = document.getElementById("slider-box");
+var interval = box.getAttribute("data-s-interval");
 
 function autoPlay() {
     next();
@@ -84,7 +85,7 @@ var timer = setInterval(autoPlay, interval);
 // 重新設定計時器
 function resetTimer(){
     // 清除計時器
-    clearInterval();
+    clearInterval(timer);
     // 重新設定間隔
     timer = setInterval(autoPlay, interval);
 }
