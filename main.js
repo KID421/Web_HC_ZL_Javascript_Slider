@@ -16,7 +16,17 @@ function next() {
     }
     
     console.log("編號：" + index);
+
+    showItem();
 }
 
 //下一張按鈕.點擊 = 下一張按鈕的功能
 nextBtn.onclick = next;
+
+// 顯示項目
+function showItem() {
+    for (let index = 0; index < items.length; index++) {
+        const element = items[index];
+        console.log(element);
+    }
+}
